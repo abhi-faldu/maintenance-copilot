@@ -1,0 +1,13 @@
+# Store and check out text files with LF on every OS, so Windows and Linux CI see identical diffs.
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary corpus and assets: never touch line endings, never diff as text.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.gif binary
